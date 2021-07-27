@@ -27,6 +27,12 @@
               <input id="icon" type="text" class="inputfield w-full" pInputText formControlName="icon" />
               <small *ngIf="categoryForm.icon.invalid && isSubmitted" class="p-error">Icon is required</small>
             </div>
+            <div class="field col">
+              <label for="color">Color</label> <br />
+              <p-colorPicker formControlName="color"></p-colorPicker>
+              <!-- <input id="color" type="text" class="inputfield w-full" pInputText formControlName="color" /> -->
+              <small *ngIf="categoryForm.color.invalid && isSubmitted" class="p-error">Color is required</small>
+            </div>
           </div>
         </form>
       </div>

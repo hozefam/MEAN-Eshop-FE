@@ -16,17 +16,21 @@
         <p-table [value]="categories" styleClass="p-datatable-gridlines">
           <ng-template pTemplate="header">
             <tr>
-              <th>Id</th>
-              <th>Name</th>
+              <!-- <th>Id</th> -->
+              <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
               <th>Icon</th>
+              <th>Color</th>
               <th></th>
             </tr>
           </ng-template>
           <ng-template pTemplate="body" let-category>
             <tr>
-              <td>{{ category.id }}</td>
+              <!-- <td>{{ category.id }}</td> -->
               <td>{{ category.name }}</td>
-              <td>{{ category.icon }}</td>
+              <td><i class="pi" [ngClass]="'pi-' + category.icon" style="font-size: 2rem"></i></td>
+              <td>
+                <i class="pi pi-circle-on" style="font-size: 2rem" [ngStyle]="{ color: category.color }"></i>
+              </td>
               <td>
                 <p-button styleClass="p-button-danger mr-2" icon="pi pi-trash" (click)="deleteCategory(category.id)"></p-button>
                 <p-button styleClass="p-button-success" icon="pi pi-pencil" (click)="updateCategory(category.id)"></p-button>

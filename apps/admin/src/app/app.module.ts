@@ -18,12 +18,13 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
+import { ColorPickerModule } from 'primeng/colorpicker';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesFormComponent } from './categories/categories-form/categories-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-const UX_MODULE = [CardModule, ToolbarModule, ButtonModule, TableModule, InputTextModule, ToastModule, ConfirmDialogModule];
+const UX_MODULE = [CardModule, ToolbarModule, ButtonModule, TableModule, InputTextModule, ToastModule, ConfirmDialogModule, ColorPickerModule];
 
 const routes: Routes = [
   {
