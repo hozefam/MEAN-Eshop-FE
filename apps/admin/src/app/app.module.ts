@@ -9,7 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ShellComponent } from './shared/shell/shell.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { CategoriesListComponent } from './categories/categories-list/categories-list.component';
+import { CategoriesListComponent } from './pages/categories/categories-list/categories-list.component';
 import { CardModule } from 'primeng/card';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
@@ -21,7 +21,7 @@ import { ConfirmationService } from 'primeng/api';
 import { ColorPickerModule } from 'primeng/colorpicker';
 
 import { HttpClientModule } from '@angular/common/http';
-import { CategoriesFormComponent } from './categories/categories-form/categories-form.component';
+import { CategoriesFormComponent } from './pages/categories/categories-form/categories-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const UX_MODULE = [CardModule, ToolbarModule, ButtonModule, TableModule, InputTextModule, ToastModule, ConfirmDialogModule, ColorPickerModule];

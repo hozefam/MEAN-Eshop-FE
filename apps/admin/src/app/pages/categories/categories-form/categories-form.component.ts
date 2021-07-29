@@ -57,15 +57,15 @@ export class CategoriesFormComponent implements OnInit {
 
   private _addCategory(category: Category) {
     this.categoriesService.createCategory(category).subscribe(
-      response => {
+      () => {
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Category is Created' });
         timer(2000)
           .toPromise()
-          .then(done => {
+          .then(() => {
             this.location.back();
           });
       },
-      error => {
+      () => {
         this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Category is not created' });
       },
     );
@@ -73,15 +73,15 @@ export class CategoriesFormComponent implements OnInit {
 
   private _editCategory(category: Category) {
     this.categoriesService.updateCategory(category).subscribe(
-      response => {
+      () => {
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Category is Updated' });
         timer(2000)
           .toPromise()
-          .then(done => {
+          .then(() => {
             this.location.back();
           });
       },
-      error => {
+      () => {
         this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Category is not updated' });
       },
     );
@@ -103,5 +103,9 @@ export class CategoriesFormComponent implements OnInit {
         });
       }
     });
+  }
+
+  gotoPrev() {
+    this.location.back();
   }
 }

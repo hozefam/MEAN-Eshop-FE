@@ -18,7 +18,8 @@
       "@hozefam/orders": ["libs/orders/src/index.ts"],
       "@hozefam/products": ["libs/products/src/index.ts"],
       "@hozefam/ui": ["libs/ui/src/index.ts"],
-      "@hozefam/users": ["libs/users/src/index.ts"]
+      "@hozefam/users": ["libs/users/src/index.ts"],
+      "@env/*": ["environment/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

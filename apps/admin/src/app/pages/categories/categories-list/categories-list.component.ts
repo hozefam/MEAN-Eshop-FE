@@ -32,17 +32,14 @@ export class CategoriesListComponent implements OnInit {
       accept: () => {
         //Actual logic to perform a confirmation
         this.categoriesServices.deleteCategory(categoryId).subscribe(
-          response => {
+          () => {
             this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Category is deleted' });
             this._getCategories();
           },
-          error => {
+          () => {
             this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Category is not deleted' });
           },
         );
-      },
-      reject: () => {
-        return;
       },
     });
   }
